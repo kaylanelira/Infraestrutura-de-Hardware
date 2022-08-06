@@ -17,3 +17,11 @@ equal:
 
 a: .word 10	# define entrada a
 b: .word 10	# define entrada b
+
+
+# ENUNCIADO DA QUESTÃO
+# Encontre a menor sequência de instruções do RISC-V que implementa a código abaixo, onde a, b e m são variáveis inteiras na memória. 
+# int a = ; int b = ; int m = ;
+# m = a;
+# if ( b == m ) m = b - a;
+# else m = a - b;

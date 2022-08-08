@@ -1,4 +1,4 @@
-addi x9, x0, 13
+addi x9, x0, 0x0d
 # a (x10)
 addi sp, sp, -36
 jal x14, gets	
@@ -22,12 +22,15 @@ sb x13, 0(sp)
 
 # funcao p/ pegar numero
 gets:
-	lb x15, 1025(x0)
-	# sb x15, 1024(x0)
+	lw x15, 1025(x0)
 	beq x15, x9, done
-	jal x14, loop
+	slli x16, x15, 3
+	slli x15, x15, 1
+	add x15, x15, x16
+	jal x17, gets
 done:
-	jalr x0, 0(x1)
+	lw x15, 1024(x0)
+	jalr x0, 0(x14)
 # x = 0
 addi x13, x0, 0
 # a >= 0

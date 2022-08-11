@@ -1,11 +1,9 @@
-# ERRO: usar b>32 resulta em 0
 addi x9, x0, 0xd # enter
-xor x12, x12, x12
 
 # a (x10)
 jal x1, inic	# a em x12
 add x10, x12, x0
-xor x12, x12, x12	# reset x12
+xor x12, x12, x12 # reset x12
 
 # b (x14)
 jal x1, inic
@@ -26,12 +24,12 @@ blt x10, x20, end 	# a < 0
 
 # b <= 64 (65: 0041)
 and_:
-	addi x18, x0, 0041
+	addi x18, x0, 0x041
 	bge x14, x18, end	# b >= 65
 
 # c > 23 (0017)
 and__:
-	addi x19, x0, 0017
+	addi x19, x0, 0x017
 	bge x19, x15, end	# 23 >= c
 
 inc:

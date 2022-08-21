@@ -1,20 +1,20 @@
 init:
-	lb x10, 0(x0)
+	lb x10, 0(x0) 
 	sb x10, 1030(x0) # potenciometro
-	addi x12, x0, 0xcc # 10
-	addi x15, x0, 0x132 # 15
-	addi x16, x0, 0x19b # 21
-	addi x17, x0, 0x200 # 26
-	addi x18, x0, 0x266 # 31
+	addi x12, x0, 0x0e1 # maior que 10 
+	addi x15, x0, 0x133 # maior que 15
+	addi x16, x0, 0x19a # maior que 20
+	addi x17, x0, 0x200 # maior que 25
+	addi x18, x0, 0x266 # maior que 30
 	
 loop:
 	lh x10, 1031(x0)
-	bge x10, x18, ledVD
-	bge x10, x17, ledVdD_if
-	bge x10, x16, ledVdE_if
-	bge x10, x15, ledAD_if
-	bge x10, x12, ledAE_if
-	bge x12, x10, ledVE
+	bge x10, x18, ledVD	# >= 31
+	bge x10, x17, ledVdD_if	# >= 26
+	bge x10, x16, ledVdE_if	# >= 21
+	bge x10, x15, ledAD_if	# >= 16
+	bge x10, x12, ledAE_if	# >= 11
+	blt x10, x12, ledVE	# < 11
 	jal x0, loop
 
 ledAE_if:
@@ -162,10 +162,8 @@ desligLED_VD:
 	sb x14, 1034(x0)
 	jalr x0, 0(x1)
 
-# 0 ->  0000000000 
-# 10 -> 0011001100 cc
+# 11 -> 0011100001	0e1
 # 15 -> 0100110010 132
 # 20 -> 0110011001 199
 # 25 -> 0111111111 lff
 # 30 -> 1001100101 265
-

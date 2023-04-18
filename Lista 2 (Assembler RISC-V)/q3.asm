@@ -1,3 +1,8 @@
+Encontre a menor sequência de instruções RISC-V que extrai os bits 15 até 8 do
+registrador x10 e usa o valor desse campo para substituir os bits 31 até 24 no registrador
+x11 sem alterar os outros bits dos registradores x10 ou x11. Teste com 5 valores
+diferentes no registrador x10.
+
 lw x10, a
 lw x11, b
 lw x12, bitmask1

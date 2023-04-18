@@ -1,3 +1,21 @@
+Escreva um código que implementa um decodificador para o display de 7
+segmentos. A partir do código colocado no teclado de 4 bits, aparecerá o número
+respectivo no display de 7-segmentos do Arduino virtual. O número que aparecerá no
+display de 7 segmentos será de acordo com a entrada no teclado conforme a tabela
+abaixo.
+Entrada digital no teclado 	Número do display 7 segmentos
+0000 									0
+0001 									1
+0010 									2
+0011 									3
+0100 									4
+0101 									5
+0110 									6
+0111 									7
+1000 									8
+1001 									9
+1111 							  Limpa display
+
 addi x9, x0, 4	# indica quant de numeros na entrada
 
 # pegando entrada

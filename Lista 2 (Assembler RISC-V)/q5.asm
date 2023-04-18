@@ -1,3 +1,30 @@
+Um estudante de graduação resolveu criar um jogo e pediu a sua ajuda! O jogo,
+que é em dupla, começa quando os jogadores 1 e 2 enviam uma palavra (string) cada
+um pelo teclado. Após enviar, esperam o cálculo de sua pontuação que é mostrado
+no visor. Além disso o visor deve informar o jogador que ganhou ou se houve empate.
+A pontuação de cada jogador é calculada baseada na soma dos valores referentes as
+letras da tabela abaixo:
+
+Letras 				Valor
+A, E, I, O, U 		  1
+D, G, T 			  2
+B, C, M, N, P 		  3
+F, H, V, W, Y 		  4
+K, R, S 			  5
+J, L, X 			  8
+Q, Z 				 10
+
+Exemplo:
+A pontuação da palavra "GOTICO" é 10, pois:
+- 2 pontos para G
+- 1 ponto para O, duas vezes
+- 2 pontos para T
+- 1 ponto para I
+- 3 pontos para C
+Obs: O jogo só aceitará letras maiúsculas.
+Obs2: Acentuação será desconsiderada (não serão enviadas palavras com
+acentuação ou cedilha).
+
 addi x10, x0, 13 	# enter
 addi x21, x0, 1		# indica qual string foi digitada (vai ser decrementada)
 addi x16, x0, 10	# auxilia dezena

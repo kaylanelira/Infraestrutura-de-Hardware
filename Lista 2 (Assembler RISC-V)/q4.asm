@@ -1,3 +1,7 @@
+Escreva um código em linguagem assembly do RISC-V que receba uma string
+no teclado do CompSim e retorne a quantidade de vogais da string no monitor do
+CompSim. Usar apenas letras minúsculas e maiúsculas.
+
 addi x6, x0, 10	# auxilia dezena
 addi x7, x0, 100	# auxilia centena
 # enter

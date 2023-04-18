@@ -1,3 +1,6 @@
+Encontre a menor sequência de instruções do RISC-V que implementa a código
+abaixo, onde a, b e m são variáveis inteiras na memória.
+
 # carregando valores a e b nos regs
 lw x10, a
 lw x11, b

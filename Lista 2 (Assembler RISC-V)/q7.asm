@@ -1,3 +1,15 @@
+Escreva um código em assembly do RISC-V que faça uma leitura analógica do
+potenciômetro do sensor de temperatura do Arduino virtual e acenda um led verde,
+amarelo ou vermelho dependendo do valor da leitura conforme a tabela abaixo.
+
+Temperatura 			Led
+0-10 			Vermelho -esquerda
+10- 15 			Amarelo – esquerda
+15 - 20 		Amarelo - direita
+20 - 25 		Verde - esquerda
+25 – 30 		Verde - direita
+Maior que 30 	Vermelho - direita
+
 init:
 	lb x10, 0(x0) 
 	sb x10, 1030(x0) 	# potenciometro

@@ -1,3 +1,8 @@
+Encontre a menor sequência de instruções RISC-V que implementa a código abaixo,
+onde a,b,c e x são variáveis na memória. Teste um array de entrada com 15 sequencias
+diferentes de a, b e c, que deverão ser dadas pelo teclado. Os resultados e as entradas
+deverão ser visualizadas no display.
+
 addi x9, x0, 0xd # enter
 
 # a (x10)

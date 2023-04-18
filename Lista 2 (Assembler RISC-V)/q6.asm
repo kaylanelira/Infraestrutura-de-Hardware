@@ -1,3 +1,12 @@
+Um outro aluno resolveu testar suas habilidades matemáticas fazendo fatoriais.
+Para dificultar o treino ele resolveu somar os valores do fatorial de cada dígito de um
+número. Escreva um código em Assembly do RISC-V que simule o raciocínio desse
+aluno recebendo um número de até 6 dígitos e devolvendo a soma dos fatoriais.
+Ex 1.: Entrada => 1234
+Saída => 33 (1! + 2! + 3! + 4! = 33)
+Ex 2.: Entrada => 678
+Saída => 46080 (6! + 7! + 8! = 46080)
+
 addi x5, x0, 1
 addi x6, x0, 48
 addi x7, x0, 10		# auxilia dezena
